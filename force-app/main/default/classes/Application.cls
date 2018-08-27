@@ -26,7 +26,7 @@ public class Application {
         Application.Selector,
         // Map SObjectType to Domain Class Constructors
     new Map<SObjectType, Type> {
-        // Account.SObjectType => Accounts.Constructor.class
+        //Account.SObjectType => Accounts.Constructor.class
     });
 
 }
