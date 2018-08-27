@@ -1,0 +1,10 @@
+{
+    "orgName": "nutchanonpho-ngoen Company",
+    "edition": "Enterprise",
+    "orgPreferences" : {
+        "enabled": ["S1DesktopEnabled"]
+    },
+    "features": ["PersonAccounts"],
+    "country": "TH",    
+    "language": "en_US"
+}
