@@ -26,4 +26,12 @@ private class AccountServiceTest {
         System.assertEquals('Test', testAccount.Description);
         ((fflib_ISObjectUnitOfWork) mocks.verify(mockUow, 1)).registerDirty((List<Account>) fflib_Match.anyObject());
     }
+
+    @isTest static void test_createReminder_unitTest() {
+        Account testAccount = new Account(Name = 'Hello');
+        insert testAccount;
+
+        List<Task> taskList = AccountService.createReminder(new List<Account> {testAccount});
+        System.assertEquals(1, taskList.size());
+    }
 }

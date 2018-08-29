@@ -3,6 +3,10 @@ public with sharing class AccountService {
         service().updateDescription(uow, accountIdSet);
     }
 
+    public static List<Task> createReminder(List<Account> accountList) {
+        return service().createReminder(accountList);
+    }
+
     private static IAccountService service() {
         return (IAccountService) Application.Service.newInstance(AccountService.class);
     }
