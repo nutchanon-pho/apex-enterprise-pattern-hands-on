@@ -3,7 +3,8 @@ public class Application {
     public static final fflib_Application.UnitOfWorkFactory UnitOfWork =
         new fflib_Application.UnitOfWorkFactory(
     new List<SObjectType> {
-        Account.SObjectType
+        Account.SObjectType,
+        Task.SObjectType
     });
 
     // Configure and create the ServiceFactory for this Application

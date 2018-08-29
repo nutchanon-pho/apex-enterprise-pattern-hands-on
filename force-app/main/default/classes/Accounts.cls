@@ -19,6 +19,7 @@ public class Accounts extends fflib_SObjectDomain {
 
 	public override void onBeforeInsert() {
         stampAccountName();
+		createReminder();
 
 		uow.commitWork();
 	}
@@ -47,6 +48,11 @@ public class Accounts extends fflib_SObjectDomain {
             thisAccount.Name = 'Mr.' + thisAccount.Name;
         }
     }
+
+	public void createReminder() {
+		List<Task> taskList = AccountService.createReminder((List<Account>) Records);
+		uow.registerNew(taskList);
+	}
 
 	public class Constructor implements fflib_SObjectDomain.IConstructable2 {
 		public fflib_SObjectDomain construct(List<SObject> sObjectList) {
