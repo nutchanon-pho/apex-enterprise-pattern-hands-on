@@ -3,14 +3,14 @@ public class Application {
     public static final fflib_Application.UnitOfWorkFactory UnitOfWork =
         new fflib_Application.UnitOfWorkFactory(
     new List<SObjectType> {
-        // Account.SObjectType
+        Account.SObjectType
     });
 
     // Configure and create the ServiceFactory for this Application
     public static final fflib_Application.ServiceFactory Service =
         new fflib_Application.ServiceFactory(
     new Map<Type, Type> {
-        //CaseService.class => CaseServiceImpl.class
+        AccountService.class => AccountServiceImpl.class
     });
 
     // Configure and create the SelectorFactory for this Application
