@@ -17,7 +17,7 @@ public class Application {
     public static final fflib_Application.SelectorFactory Selector =
         new fflib_Application.SelectorFactory(
     new Map<SObjectType, Type> {
-        //Account.SObjectType => AccountsSelector.class
+        Account.SObjectType => AccountsSelector.class
     }); 
 
     // Configure and create the DomainFactory for this Application
