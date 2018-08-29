@@ -44,7 +44,7 @@ public class Accounts extends fflib_SObjectDomain {
 
     public void stampAccountName() {
         for(Account thisAccount : (List<Account>) Records) {
-            thisAccount += 'Mr.';
+            thisAccount.Name = 'Mr.' + thisAccount.Name;
         }
     }
 
